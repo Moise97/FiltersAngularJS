@@ -37,7 +37,7 @@
                         <td>{{item.name}}</td>
                         <td>{{item.category}}</td>
                         <td>{{item.expiry}}</td>
-                        <td class="text-right">{{item.price | currency:"£"}}</td>
+                        <td class="text-right">{{item.price | currency:"£" || number: 0}}</td>
                     </tr>
                 </tbody>
             </table>
