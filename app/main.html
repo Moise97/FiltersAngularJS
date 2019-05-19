@@ -8,6 +8,7 @@
 
     <script src="../app/controllers/default-controller.js"></script>
     <script src="../app/services/request.js"></script>
+    <script src="../node_modules/angular-i18n/angular-locale_fr-fr.js"></script>
 </head>
 <body ng-controller="defaultCtrl">
     
@@ -34,10 +35,10 @@
                 </thead>
                 <tbody>
                     <tr ng-repeat="item in products">
-                        <td>{{item.name | uppercase}}</td>
-                        <td>{{item.category | lowercase}}</td>
-                        <td>{{getExpiryDate(item.expiry) | date: "dd.MM.yyyy"}}</td>
-                        <td class="text-right">{{item.price | currency:"£" || number: 0}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.category}}</td>
+                        <td>{{getExpiryDate(item.expiry) | date: "shortDate"}}</td>
+                        <td class="text-right">{{item.price | currency}}</td>
                     </tr>
                 </tbody>
             </table>
