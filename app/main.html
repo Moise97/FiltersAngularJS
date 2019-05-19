@@ -34,8 +34,8 @@
                 </thead>
                 <tbody>
                     <tr ng-repeat="item in products">
-                        <td>{{item.name}}</td>
-                        <td>{{item.category}}</td>
+                        <td>{{item.name | uppercase}}</td>
+                        <td>{{item.category | lowercase}}</td>
                         <td>{{getExpiryDate(item.expiry) | date: "dd.MM.yyyy"}}</td>
                         <td class="text-right">{{item.price | currency:"£" || number: 0}}</td>
                     </tr>
