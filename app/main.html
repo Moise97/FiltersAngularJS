@@ -34,7 +34,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="item in products">
+                    <tr ng-repeat="item in products | orderBy: '-price'">
                         <td>{{item.name}}</td>
                         <td>{{item.category}}</td>
                         <td>{{getExpiryDate(item.expiry) | date: "shortDate"}}</td>
